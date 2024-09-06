@@ -1,0 +1,23 @@
+{% load sidebar %}
+
+<div class="col-md-4">
+    <!-- <div class="button-group filters-button-group">
+        <button data-filter=".recent" class="button is-checked">Recent</button>
+        <button data-filter=".popular" class="button">popular</button>
+        <button data-filter=".users" class="button">Users</button>
+    </div> -->
+
+    <div class="newsletter">
+        <h2 class="sidebar-title">Search</h2>
+        <form action="{% url 'search' %}" method="get">
+            <input type="text" name="s" placeholder="Search...">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    {% get_popular 3 %}
+
+    {% get_tags %}
+
+
+</div>
